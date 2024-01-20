@@ -1,12 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
-import NavBar from './Components/NavBar';
-import { Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navigation from './Components/Navigation'
+import { Banner } from './Components/Banner';
+import Skills from './Components/Skills';
+import Experience from './Components/Experience';
+import Projects from './Components/Projects';
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Navigation />
+      <Banner/>
+      <Skills/>
+      <Experience/>
+      <Projects/>
     </div>
   );
 }
