@@ -35,9 +35,11 @@
   background-color: #121212 !important;
   color:#fff !important;
   font-family: 'Centra',sans-serif !important;
-    background-attachment: fixed;
-
-  background-image: url('./assets/img/bg-texture.png'),linear-gradient(to left top, #c08df1, #9d71ce, #7b56ab, #5b3c8a, #3c236a, #351754, #2c0c3f, #22002c, #22001f, #1d0014, #140008, #000000);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('./assets/img/landingpage.svg');
+  /* background-image: url('./assets/img/bg-texture.png'),linear-gradient(to left top, #c08df1, #9d71ce, #7b56ab, #5b3c8a, #3c236a, #351754, #2c0c3f, #22002c, #22001f, #1d0014, #140008, #000000); */
  }
 
  h1,h2,h3,h4,h5,h6{
@@ -98,8 +100,10 @@ nav.navbar{
     transition: 0.32s ease-in-out;
 }
 nav.navbar.scrolled{
+    background-color: #09100ef2;
     padding: 0px;
-    background-image: linear-gradient(to left, #000000, #140008, #1d0014, #22001f, #22002c, #22002c, #22002c, #22002c, #22001f, #1d0014, #140008, #000000);}
+    /* background-image: linear-gradient(to left, #000000, #140008, #1d0014, #22001f, #22002c, #22002c, #22002c, #22002c, #22001f, #1d0014, #140008, #000000); */
+}
 
 /* for brand icon */
 nav.navbar a.navbar-brand{
@@ -122,7 +126,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link{
 nav.navbar .navbar-nav .nav-link.navbar-link:hover,
 nav.navbar .navbar-nav .nav-link.navbar-link:active{
     opacity: 1;
-    color: #4F3597 !important;
+    color: #00F6FF !important;
 }
 
 /* for social icons */
@@ -291,8 +295,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     line-height: 1;
     margin-bottom: 20px;
     display: block;
-    color: #6459C7;
-}
+    background: var(--rad, radial-gradient(64.33% 64.33% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
 
 .banner p {
   color: #B8B8B8;
@@ -361,7 +368,10 @@ background: #0000003b;
 	font-size: 45px;
 	font-weight: 700;
     margin-bottom: 50px;
-    color: #6459C7;
+    background: var(--rad, radial-gradient(64.33% 64.33% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .skill-slider {
@@ -382,7 +392,7 @@ background: #0000003b;
 .circle {
     width: 15px;
     height: 15px !important;
-    background-color: #6459C7;
+    background:radial-gradient(64.33% 64.33% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
     border-radius: 50%;
     margin: 10px 0px !important;
 }
@@ -400,7 +410,10 @@ background: #0000003b;
     font-size: 45px;
 	font-weight: 700;
     margin-bottom: 50px;
-    color: #6459C7;
+    background: var(--rad, radial-gradient(64.33% 64.33% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
 }
 
@@ -418,7 +431,7 @@ background: #0000003b;
 
 .experience span{
     font-size: 14px;
-    color:#6459C7;
+    color:#00F6FF;
     text-align: right;
 }
 
