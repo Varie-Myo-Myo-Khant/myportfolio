@@ -6,14 +6,18 @@ import { Banner } from './Components/Banner';
 import Skills from './Components/Skills';
 import Experience from './Components/Experience';
 import Projects from './Components/Projects';
+import Header from './Components/Header';
+import {Contact} from './Components/Contact'
 function App() {
   return (
     <div className="App">
+      <Header/>
       <Navigation />
       <Banner/>
       <Skills/>
       <Experience/>
       <Projects/>
+      <Contact/>
     </div>
   );
 }

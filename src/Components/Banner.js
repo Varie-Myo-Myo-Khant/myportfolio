@@ -73,12 +73,12 @@ export const Banner = () =>{
             <Container className="align-items-center">
                 <Row>
                     {/* for left section */}
-                    <Col xs={12} md={6} xl={7}>
+                    <Col>
                         {/* using track visibility to use animation libraries */}
                         <TrackVisibility>
                         {({isVisible}) =>
                         <div className={isVisible? "animate__animated animate__fadeIn" :""}>
-                        <span className="tagline">Welcome to My Portfolio!</span>
+                        <span className="tagline">Hi, My name is </span>
                         <h1>{`I'm Myo Myo Khant`}
                         {/* for role animation */}
                         <span className="txt-rotate" dataPeriod="1000" data-rotate='["Backend Developer", "Software Development", "Web Director"]'>
@@ -93,16 +93,7 @@ export const Banner = () =>{
                    </TrackVisibility>
                     </Col>
 
-                    {/* for right section */}
-                    <Col xs={12} md={6} xl={5}>
-                        <TrackVisibility>
-                        {({isVisible})=>
-                        <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                        <img src={bannerImage} alt="Banner Image"/>
-                        </div>
-                        }
-                        </TrackVisibility>
-                    </Col>
+        
                 </Row>
             </Container>
         </section>

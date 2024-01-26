@@ -5,7 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 import {BrowserRouter as Router} from "react-router-dom";
 
 // importing required resources
-import logo from '../assets/img/mybrandicon.svg';
+import logo from '../assets/img/fav.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/git.svg';
 import navIcon3 from '../assets/img/gmail.svg';
@@ -48,7 +48,7 @@ function Navigation() {
 
         {/* logo */}
         <Navbar.Brand href="#home">
-            <img src={logo} alt="Logo"/>
+            <img src={logo} alt="Logo" className='brand'/>
         </Navbar.Brand>
 
         {/* for mobile version-toggle button */}
@@ -63,6 +63,8 @@ function Navigation() {
             <Nav.Link href="#skills" className={activeLink ==='skills'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('skills')}>Skills</Nav.Link>
             <Nav.Link href="#experiences" className={activeLink ==='experiences'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('experiences')}>Experiences</Nav.Link>
             <Nav.Link href="#projects"className={activeLink ==='projects'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            <Nav.Link href="#contacts"className={activeLink ==='contacts'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('contacts')}>Contact</Nav.Link>
+            
           </Nav>
 
           {/* social icon */}
@@ -73,7 +75,7 @@ function Navigation() {
                 <a href="mailto:myokhant122021@gmail.com"><img src={navIcon3} alt="My Gmail"/></a>
             </div>
           <HashLink to='#connect'>
-              <button className="vvd"><span>Let’s Connect</span></button>
+              <button className="vvd"><span>Resume</span></button>
             </HashLink>
           </span>
         </Navbar.Collapse>
