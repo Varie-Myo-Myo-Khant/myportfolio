@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Container,Row,Col } from "react-bootstrap";
+import axios from 'axios';
+
 export const Contact=() =>{
 
     const formInitialDetails={
@@ -20,36 +22,36 @@ export const Contact=() =>{
     }
 
    const handleSubmit = async (e) => {
+
+    // EmailJS service ID, template ID, and Public Key
+    const serviceId = 'service_tpyx6yx';
+    const templateId = 'template_8yamu52';
+    const publicKey = 'WRF880nNCOK_tqskO';
     e.preventDefault();
     setButtonText("Sending ...");
 
+
+    // Create an object with EmailJS service ID, template ID, Public Key, and Template params
+     const data = {
+      service_id: serviceId,
+      template_id: templateId,
+      user_id: publicKey,
+      template_params: {
+        from_name: formDetails.name,
+        from_email: formDetails.email,
+        to_name: 'My Portfolio',
+        message: formDetails.message,
+      }
+    };
+
+     // Send the email using EmailJS
     try {
-        const response = await fetch("http://localhost:5000/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json;charset=utf-8",
-            },
-            body: JSON.stringify(formDetails),
-        });
+            const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
+            console.log(res.data);
+            setFormDetails(formInitialDetails);
 
-        if (response && response.ok) {
-            try {
-                const result = await response.json();
-                setFormDetails(formInitialDetails);
-
-                if (result.code === 200) {
-                    setStatus({ success: true, message: 'Message sent successfully' });
-                } else {
-                    setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-                }
-            } catch (error) {
-                console.error('Error parsing JSON:', error);
-                setStatus({ success: false, message: 'Failed to parse server response.' });
-            }
-        } else {
-            console.error('Failed to fetch:', response);
-            setStatus({ success: false, message: 'Failed to fetch. Please try again later.' });
-        }
+       
+        
     } catch (error) {
         console.error('Network error:', error);
         setStatus({ success: false, message: 'Network error. Please check your connection.' });
