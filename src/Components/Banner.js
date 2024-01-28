@@ -6,7 +6,7 @@ import {ArrowRightCircle} from "react-bootstrap-icons";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-import bannerImage from "../assets/img/bannerimg.svg";
+import bannerImage from "../assets/img/mypp.jpg";
 
 
 export const Banner = () =>{
@@ -79,22 +79,25 @@ export const Banner = () =>{
                         {({isVisible}) =>
                         <div className={isVisible? "animate__animated animate__fadeIn" :""}>
                         <span className="tagline">Hi, My name is </span>
-                        <h1>{`I'm Myo Myo Khant`}
+                        <h1>{`Myo Myo Khant`}
                         {/* for role animation */}
                         <span className="txt-rotate" dataPeriod="1000" data-rotate='["Backend Developer", "Software Development", "Web Director"]'>
                         <br/>
                         <span className="wrap">{text}</span></span></h1>
-                        <p>A committed IT enthusiast who approaches every assignment and scenario with maturity and responsibility. Possessing strong technological skills, including Designing, Programming, and hardware 3D modeling. Well-versed in software testing, Data Analysis, Research, UI/UX, ERP, and SEO. Experienced in software development, web development, and project management. Never afraid to learn, code and develop!</p>
-                        
+                        <p>
+                            I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. 
+                            Currently, I’m focused on building accessible, human-centered products.
+                        </p>
                         {/* Using boostrap icons */}
                         <button onClick={()=>console.log('connect')}>Let's Connect <ArrowRightCircle size={25}/></button>
                         </div>
                    }
                    </TrackVisibility>
                     </Col>
-
-        
-                </Row>
+                    {/* <Col>
+                    <img src={bannerImage}/>
+                    </Col> */}
+               </Row>
             </Container>
         </section>
     )

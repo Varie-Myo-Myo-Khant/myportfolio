@@ -1,18 +1,14 @@
-import {Col,Button,Card} from "react-bootstrap";
+import {Col} from "react-bootstrap";
 
-export const ProjectCard =({title,description,imgUrl})=>{
+export const ProjectCard =({title,description,imgUrl,link})=>{
     return(
-       
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={imgUrl} />
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>
-        {description}
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+       <Col className="pCard">
+       <h3 className="pCardTitle">{title}</h3>
+       <img className="pCardImage"src={imgUrl}/>
+       <p className="pCardDescription">{description}</p>
+       <a href={link} className="pButton" target="_blank">Show Details...</a>
+       </Col>
+      
       
     )
 }

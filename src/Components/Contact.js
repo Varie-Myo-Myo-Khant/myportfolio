@@ -41,6 +41,7 @@ export const Contact=() =>{
         from_email: formDetails.email,
         to_name: 'My Portfolio',
         message: formDetails.message,
+        phone:formDetails.phone,
       }
     };
 
@@ -49,9 +50,7 @@ export const Contact=() =>{
             const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
             console.log(res.data);
             setFormDetails(formInitialDetails);
-
-       
-        
+            setStatus({ success: true, message: 'The email has send sucessfully! Thank you!' });
     } catch (error) {
         console.error('Network error:', error);
         setStatus({ success: false, message: 'Network error. Please check your connection.' });
