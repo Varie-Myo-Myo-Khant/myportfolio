@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container,Row,Col } from "react-bootstrap";
 import axios from 'axios';
+import {AlertEmailResult} from "./AlertEmailResult"
 
 export const Contact=() =>{
 
@@ -51,45 +52,45 @@ export const Contact=() =>{
             console.log(res.data);
             setFormDetails(formInitialDetails);
             setStatus({ success: true, message: 'The email has send sucessfully! Thank you!' });
+
     } catch (error) {
         console.error('Network error:', error);
         setStatus({ success: false, message: 'Network error. Please check your connection.' });
+      
+        
     } finally {
         setButtonText("Send");
+        
     }
 };
 
     return(
         <section className="contact" id="contacts">
-            <Container>
+            <Container className="contactContainer">
                 <Row className="align-iterms-center">
-                    <h2>Get in Touch</h2>
+                    <span className="expText">Get In Touch,</span>
+                    <h2 className="sectionTitle">Contact Me</h2>
                     <form onSubmit={handleSubmit}>
-                    <Col md={6} className="px-1">
-                        <input type="text" value={formDetails.name} placeholder="Name" onChange={(e) => onFormUpdate('name',e.target.value)}/>
-                    </Col>
-                    <Col md={6} className="px-1">
-                        <input type="text" value={formDetails.email} placeholder="Email" onChange={(e) => onFormUpdate('email',e.target.value)}/>
-                    </Col>
-                    <Col md={6} className="px-1">
-                        <input type="text" value={formDetails.phone} placeholder="Phone" onChange={(e) => onFormUpdate('phone',e.target.value)}/>
-                    </Col>
-                    <Col md={6} className="px-1">
-                        <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message',e.target.value)}></textarea>
-                    </Col>
-                     <Col size={12} className="px-1">
-                      <button type="submit"><span>{buttonText}</span></button>
-                    </Col>
-                    {
-                        status.message &&
-                        <Col>
-                        <p className={status.success === false? "danger" : "success"}>{status.message}</p>
-                        </Col>
-                    }
+                        
+                        <input className="formInput" type="text" value={formDetails.name} placeholder="Name" onChange={(e) => onFormUpdate('name',e.target.value)}/>
+                    <br/>
+
+                        <input className="formInput" type="text" value={formDetails.email} placeholder="Email" onChange={(e) => onFormUpdate('email',e.target.value)}/>
+                    
+                     <br/>
+                        <input className="formInput" type="text" value={formDetails.phone} placeholder="Phone" onChange={(e) => onFormUpdate('phone',e.target.value)}/>
+                    
+                     <br/>
+                        <textarea className="formInput" rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message',e.target.value)}></textarea>
+                    
+                     <br/>
+                      <button type="submit" className="cBtn"><span>{buttonText}</span></button>
+                   
                     </form>
                 </Row>
-                
+                {<AlertEmailResult state={status.success} message={status.message}/>}
             </Container>
         </section>
+        
     )
 }

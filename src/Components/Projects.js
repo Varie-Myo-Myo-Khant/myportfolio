@@ -25,7 +25,18 @@ function Projects(){
       imgUrl: projImg3,
       link:"https://github.com/Ms-Myo-Myo-Khant/e-commerce-behavioral-analysis",
     },
-   
+   {
+      title: "Ecommerce Consumer Behavioral Analysis",
+      description: "The study of how individuals interact with online shopping platforms and make purchasing decisions.Customer Segmentation Based On Product Categories using K-means Clustering & Items Frequently Bought Together using Association Alogrithm - FP Growth",
+      imgUrl: projImg3,
+      link:"https://github.com/Ms-Myo-Myo-Khant/e-commerce-behavioral-analysis",
+    },
+    {
+      title: "Ecommerce Consumer Behavioral Analysis",
+      description: "The study of how individuals interact with online shopping platforms and make purchasing decisions.Customer Segmentation Based On Product Categories using K-means Clustering & Items Frequently Bought Together using Association Alogrithm - FP Growth",
+      imgUrl: projImg3,
+      link:"https://github.com/Ms-Myo-Myo-Khant/e-commerce-behavioral-analysis",
+    },
   ];
 
     return(

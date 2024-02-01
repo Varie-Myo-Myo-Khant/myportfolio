@@ -1,57 +1,71 @@
 
 import { Container, Row, Col } from "react-bootstrap";
-import icon from '../assets/img/patch-check-fill.svg'
+import Accordion from 'react-bootstrap/Accordion';
+import icon from '../assets/img/patch-check-fill.svg';
+
 function Experience(){
+    const experiences = [
+    {
+      title: "Web Director",
+      company:"Digital Laboratory Myanmar",
+      duration:"Aug 2022 - May 2023",
+      description: "Managed multiple websites, improving UI/UX for Japanese sites and building with WordPress, Webflow, and Ghost. Conducted tech research and contributed to SEO by monitoring rankings and providing weekly reports.",
+    },
+    {
+      title: "Junior Software Test & QA Services",
+      company:"Ovaspace",
+      duration:"Apr 2022 - Jun 2022",
+      description: "Tested ERP products, wrote documentation, and presented weekly customer meetings in English. Implemented customer data into ERP system and provided support to the development team.",
+    },
+    {
+      title: "Freelance IT Research Assistant",
+      company:"For a Ph.D at Chulalongkorn University",
+      duration:"Mar 2020 - Present",
+      description: "Managed survey experiments for AI tools research, ensuring smooth operation. Analyzed data proficiently using statistical methods and IBM SPSS software and contributed to drafting a research paper following academic standards.",
+    },
+    {
+      title: "Programming Lecturer",
+      company:"Freelance",
+      duration:"Jan 2022 - Apr 2022",
+      description: "Teaching students about the details of Programming concepts, Website,and Database.",
+    },
+]
     return(
         <section className="experience" id="experiences">
-        <Container>
-            <Row>
-            <h2>My Experiences</h2>
-                <Col>
-                    <div>
-                        <h3><img src={icon}/>Web Director | Digital Laboratory Myanmar</h3>
-                        <span>Aug 2022 - May 2023</span>
-                        <p>Managed multiple websites, improving UI/UX for Japanese sites and building with WordPress, Webflow, and Ghost. Conducted tech research and contributed to SEO by monitoring rankings and providing weekly reports.</p>
-                    </div>
-                    <div>
-                        <h3><img src={icon}/>Junior Software Test & QA Services | Ovaspace</h3>
-                        <span> Apr 2022 - Jun 2022</span>
-                        <p>Tested ERP products, wrote documentation, and presented weekly customer meetings in English. Implemented customer data into ERP system and provided support to the development team.</p>
-                    </div>
-                    <div>
-                        <h3><img src={icon}/>Social Media Coordinator | Non-Profit Organization</h3>
-                        <span> Feb 2021 - Mar 2022</span>
-                        <p>Created diverse content for Non-Profit Organizations in English and Myanmar, including campaigns and product copy. Managed social media platforms, designing graphics and posters, and oversaw team for timeline uploads.</p>
-                    </div>
-                </Col>
-                <Col md="auto">
-                    <div class="circle"></div>
-                    <div class="line"></div>
-                    <div class="circle"></div>
-                    <div class="line"></div>
-                    <div class="circle"></div>
-                    <div class="line"></div>
-                </Col>
-                <Col>
-                    <div>
-                        
-                        <h3><img src={icon}/>IT Research Assistant | For a Ph.D at Chulalongkorn University</h3>
-                        <span>Mar 2020 - Present</span>
-                        <p>Managed survey experiments for AI tools research, ensuring smooth operation. Analyzed data proficiently using statistical methods and IBM SPSS software and contributed to drafting a research paper following academic standards.</p>
-                    </div>
-                    <div>
-                        <h3><img src={icon}/>Programming Lecturer | Freelance</h3>
-                        <span> Jan 2022 - Apr 2022</span>
-                        <p>Teaching students about the details of Programming concepts, Website,and Database.</p>
-                    </div>
-                     <div>
-                        <h3><img src={icon}/>Teaching Assistant | Chulalongkorn University</h3>
-                        <span> Apr 2021 - Apr 2022</span>
-                        <p>Prepared lecture slides on Programming, Design Thinking, and Management. Marked tutorial papers, formulated questions for mini exams, and conducted data analysis for IT courses and student marks.</p>
-                    </div>
-                </Col>
-            </Row>
-        </Container>
+            <Container>
+              <Row>
+                    <span className="expText">Where I’ve Worked,</span>
+                    <h2 className="sectionTitle">My experiences </h2>
+              
+                 <Accordion className="expContainer" defaultActiveKey="0" >
+                     {
+                    experiences.map((experience,index)=>{
+                        return(
+                    <Accordion.Item  key={index} eventKey={index} className="expItem">
+                            <Accordion.Header className="expItemHeader">
+                                
+                                <Col lg={8}>
+                                <b className="workTitle">{experience.title}</b> @ {experience.company}
+                                </Col>
+                                <Col md="auto">
+                                <span className="duration">{experience.duration}</span>
+                                </Col>
+                               
+                                </Accordion.Header>
+                            <Accordion.Body className="expItemBody">
+                            
+                            <p>{experience.description}</p>
+                            </Accordion.Body>
+                    </Accordion.Item>
+                        )
+                    }
+                    )
+                  }
+                    
+            
+                    </Accordion>
+                    </Row>
+            </Container>
         </section>
     )
 }

@@ -8,16 +8,19 @@ import Experience from './Components/Experience';
 import Projects from './Components/Projects';
 import Header from './Components/Header';
 import {Contact} from './Components/Contact';
+import Tailingcursor from './Components/Tailingcursor';
+
 function App() {
   return (
     <div className="App">
+      {/* <Tailingcursor/> */}
+      
       <Header/>
       <Navigation />
       <Banner/>
       <Skills/>
-        <Projects/>
       <Experience/>
-    
+      <Projects/>
       <Contact/>
     </div>
   );
