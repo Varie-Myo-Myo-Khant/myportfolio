@@ -2,11 +2,11 @@ import {useState, useEffect} from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {ArrowRightCircle} from "react-bootstrap-icons";
 
+
 // importing libraries for animation
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-import bannerImage from "../assets/img/mypp.jpg";
 
 
 export const Banner = () =>{
@@ -16,7 +16,7 @@ export const Banner = () =>{
     // to check the state of text deleting
     const [isDeleting,setDeleting]=useState(false);
     //to rotate postions
-    const toRotate=["Backend Developer", "Software Development", "Web Director"];
+    const toRotate=["Backend Developer", "Software Developer", "Web Director"];
     //current position
     const [text,setText]=useState('');
     //delay between character chage
@@ -79,24 +79,23 @@ export const Banner = () =>{
                         {({isVisible}) =>
                         <div className={isVisible? "animate__animated animate__fadeIn" :""}>
                         <span className="tagline">Hi, My name is </span>
-                        <h1>{`Myo Myo Khant`}
+                        <h1>{`Myo Myo Khant (Varie)`}
                         {/* for role animation */}
                         <span className="txt-rotate" dataPeriod="1000" data-rotate='["Backend Developer", "Software Development", "Web Director"]'>
                         <br/>
                         <span className="wrap">{text}</span></span></h1>
                         <p>
-                            I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. 
-                            Currently, I’m focused on building accessible, human-centered products.
+                           I am a passionate software engineer and backend developer dedicated to crafting extraordinary digital experiences through the latest technologies. I currently emphasize creating accessible, user-centric products, particularly in Smart Point of Sale (POS) and Management Systems. 
                         </p>
                         {/* Using boostrap icons */}
-                        <button onClick={()=>console.log('connect')}>Let's Connect <ArrowRightCircle size={25}/></button>
+                        
+                       <a href="https://www.linkedin.com/in/myo-myo-khant-varie-007ab319b/" target="_blank"><button >Let's Connect ! <ArrowRightCircle size={25}/></button></a>
+                     
                         </div>
                    }
                    </TrackVisibility>
                     </Col>
-                    {/* <Col>
-                    <img src={bannerImage}/>
-                    </Col> */}
+                   
                </Row>
             </Container>
         </section>

@@ -1,7 +1,6 @@
 
 import { Container, Row, Col } from "react-bootstrap";
 import Accordion from 'react-bootstrap/Accordion';
-import icon from '../assets/img/patch-check-fill.svg';
 
 function Experience(){
     const experiences = [
@@ -35,7 +34,7 @@ function Experience(){
             <Container>
               <Row>
                     <span className="expText">Where I’ve Worked,</span>
-                    <h2 className="sectionTitle">My experiences </h2>
+                    <h2 className="sectionTitle">My Experiences </h2>
               
                  <Accordion className="expContainer" defaultActiveKey="0" >
                      {

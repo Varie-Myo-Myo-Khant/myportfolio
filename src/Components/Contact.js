@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Container,Row,Col } from "react-bootstrap";
 import axios from 'axios';
-import {AlertEmailResult} from "./AlertEmailResult"
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 export const Contact=() =>{
 
+    
+
+    // for mail input
     const formInitialDetails={
         name:'',
         email:'',
@@ -64,6 +68,21 @@ export const Contact=() =>{
     }
 };
 
+
+
+// for email alert
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => {
+        setShow(false);
+    };
+    useEffect(() => {
+        if (status.message && status.message.trim() !== '') {
+            setShow(true);
+        }
+        }, [status.message]);
+
+
     return(
         <section className="contact" id="contacts">
             <Container className="contactContainer">
@@ -88,7 +107,24 @@ export const Contact=() =>{
                    
                     </form>
                 </Row>
-                {<AlertEmailResult state={status.success} message={status.message}/>}
+                {
+                status.message !== null && (
+                
+                    <Modal show={show} onHide={handleClose} className="emodal">
+                    <Modal.Header closeButton>
+                        <Modal.Title>Notification</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>{status.message}</Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="success" onClick={handleClose}>
+                        Close
+                        </Button>
+                    </Modal.Footer>
+                    </Modal>
+                
+                )
+                }
+
             </Container>
         </section>
         

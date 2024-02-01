@@ -12,6 +12,9 @@
   scroll-padding-top: 75px;
  }
 
+ a{
+    text-decoration: none !important;
+ }
  body{
   font-weight: 400;
   overflow-x: hidden;
@@ -58,12 +61,6 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-@media (min-width:1700px) {
-	main .container {
-		max-width: 100%;
-		padding: 0 150px;
-	}
-}
 
 p.success {
 	color: green;
@@ -112,7 +109,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link{
     opacity: 0.75;
 
 }
-nav.navbar .navbar-nav .nav-link.navbar-link,.tagline,.subText,.expText, .pButton{
+nav.navbar .navbar-nav .nav-link.navbar-link,table,th,tr,td,.archivesubText,.tagline,.subText,.expText, .pButton{
         font-family: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
         
 
@@ -311,7 +308,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
 }
 
-.banner button svg,.project button svg {
+.banner button svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
@@ -328,7 +325,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
+  border-right: 0.08em solid #8892b0;
   color:#8892b0;
   font-size: 32px;
 }
@@ -361,6 +358,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill p{
     color: #8892b0;
     font-size: 16px;
+    line-height: 20px;
 }
 .skill .stitle{
     font-size: 20px;
@@ -383,7 +381,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .skill .scards{
-    border: 1px solid #666;
+    border: 1px solid #8892b0;
     border-radius:10px;
     padding: 10px;
     width: 300px;
@@ -399,7 +397,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .experience h2{
-    font-size: 45px;
+    font-size: 48px;
 	font-weight: 700;
     margin-bottom: 50px;
     color: #64ffda;
@@ -439,7 +437,7 @@ h2.expItemHeader.accordion-header{
 }
 .experience .expItemHeader .accordion-button {
     background-color: transparent !important;
-    -webkit-text-fill-color: #ccd6f6;
+    -webkit-text-fill-color: #8892b0;
    
 }
 .experience .accordion-button::after{
@@ -450,7 +448,7 @@ h2.expItemHeader.accordion-header{
     transform: var(--bs-accordion-btn-icon-transform);
 }
 .experience .duration{
-    color: #ccd6f6;
+    color: #8892b0;
     text-align: right;
 }
 /* for project */
@@ -468,28 +466,38 @@ h2.expItemHeader.accordion-header{
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+ 
+}
+.project button:hover {
+  color: #ccd6f6;
+  
 }
 
 /* Project Card */
 .project .pCardsRow{
     padding: 0px;
-    margin: 50px 0px 0px;
     display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
     position: relative;
 }
 
+
 .pCard{
-    background-color: #132d4191;
-    padding: 15px !important;
-    border: 1px solid #666;
-    border-radius: 10px;
+    background-color: #112240;
+    padding: 2rem 1.75rem !important;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: top 0.1s ease-in 0.25s,opacity 0.1s ease-in;
 }
 
 .pCard:hover{
     border: 1px solid #64ffda;
-    opacity: 0.5;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    visibility: visible;
+    opacity: 1;
+    transition: bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+    transform: translateY(-7px);
 }
 
 .pCardTitle{
@@ -497,29 +505,31 @@ h2.expItemHeader.accordion-header{
     font-weight: 700;
     color: #ccd6f6;
     margin-bottom: 16px;
+    line-height: 28px;
 }
 
-.pCardImage{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 16px;
+.planguage{
+    font-size: 14px;
+    margin-right: 8px;
+    color: #64ffda;
 }
 
 .pCardDescription{
     color: #8892b0;
-    font-size: 16px;
-    margin-bottom: 30px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 20px;
 }
 
 .pButton{
+    margin-top: 32px;
     text-decoration: none;
     font-size: 16px;
-    /* padding: 10px;
-    border: 1px solid #666; */
-     color: #64ffda;
-     /* border-radius: 10px; */
+     color: #ccd6f6;
+}
+
+.pButton img{
+    width: 20px;
 }
 
 /* for contact */
@@ -530,7 +540,7 @@ h2.expItemHeader.accordion-header{
 .formInput{
     background-color: transparent;
     color: white;
-    border: 1px solid #666;
+    border: 1px solid #8892b0;
     font-size: 14px;
     margin-bottom: 15px;
     padding: 16px;
@@ -541,7 +551,7 @@ h2.expItemHeader.accordion-header{
 
 .contactContainer button.cBtn{
     color: white;
-    border: 1px solid #64ffda;
+    border: 1px solid #8892b0;
     padding: 12px;
     margin-left: 16px;
     font-size: 14px;
@@ -577,4 +587,151 @@ h2.expItemHeader.accordion-header{
 	width: 100%;
 	height: 100%;
 	position: absolute;
+}
+
+/* for all projects */
+.archive{
+    margin: 200px 0px 100px 0px;
+    display: grid;
+    row-gap: 50px;
+}
+
+.archivesubText{
+    color: #64ffda;
+    font-size: 16px;
+}
+.archiveTitle {
+	font-size: 48px;
+	font-weight: 700;
+    margin-bottom: 16px;
+    color: #ccd6f6;
+}
+.archive table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.archive table th{
+    padding: 10px;
+   color: #ccd6f6;
+   font-weight: 700;
+}
+
+.archive .table-dark{
+    --bs-table-bg:transparent;
+}
+
+.archive .year{
+    color: #64ffda;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.archive .protitle{
+    color: #ccd6f6;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.archive .glink img{
+    width: 20px;
+    
+}
+.archive .glink{
+    padding-left: 50px;
+}
+
+.archive .lang code{
+    margin-right: 5px;
+     color: #8892b0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* for email modal alert */
+.emodal .modal-content{
+    background-color: #324a74;
+}
+
+.emodal .btn-close{
+    --bs-btn-close-color:#ccd6f6;
+}
+
+.mfooter{
+    -webkit-box-align: center;
+    align-items: center;
+    height: auto;
+    min-height: 70px;
+    padding: 15px;
+    text-align: center;
+    margin: 100px 0px 0px 0px;
+}
+
+.mfooter .row{
+    align-items: center;
+}
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+
+/* Phones (Portrait and Landscape) */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  body{
+    padding: 0px 15px;
+  }
+  .banner h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .txt-rotate > .wrap{
+    font-size: 24px;
+  }
+  .sectionTitle,.experience h2{
+    font-size: 32px;
+  }
+  .skill .skillcontainer .col-md-5,.align-items-center .col,.expContainer.accordion{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .skill,.pContainer{
+    padding-top: 20px;
+  }
+  .experience .duration{
+    display: none;
+  }
+  .project .sectionTitle{
+    margin-bottom: 30px;
+  }
+  .formInput{
+    width: 100%;
+  }
+  nav.navbar a.navbar-brand {
+    width: 30%;
+}
+nav.navbar .navbar-nav .nav-link.navbar-link{
+    margin:10px;
+}
+div#basic-navbar-nav{
+    background-color: #112240;
+    margin: 0px 12px;
+}
+}
+
+/* iPads (Portrait and Landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+#basic-navbar-nav  .social-icon{
+    display: none;
+  }
+
+  .experience .duration{
+    display: none;
+  }
+  .banner h1 {
+    font-size: 60px;
+  }
 }
