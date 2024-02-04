@@ -59,11 +59,11 @@ function Navigation() {
         {/* changing className of current nav link */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/#home" className={activeLink ==='home'? 'active navbar-link': 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}><span className='gtext'>01.</span>Home</Nav.Link>
-            <Nav.Link href="/#skills" className={activeLink ==='skills'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('skills')}><span className='gtext'>02.</span>Skills</Nav.Link>
-            <Nav.Link href="/#experiences" className={activeLink ==='experiences'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('experiences')}><span className='gtext'>03.</span>Experiences</Nav.Link>
-            <Nav.Link href="/#projects"className={activeLink ==='projects'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('projects')}><span className='gtext'>04.</span>Projects</Nav.Link>
-            <Nav.Link href="/#contacts"className={activeLink ==='contacts'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('contacts')}><span className='gtext'>05.</span>Contact</Nav.Link>
+            <Nav.Link href="/#home" className={activeLink ==='home'? 'active navbar-link': 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
+            <Nav.Link href="/#skills" className={activeLink ==='skills'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('skills')}>Skills</Nav.Link>
+            <Nav.Link href="/#experiences" className={activeLink ==='experiences'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('experiences')}>Experiences</Nav.Link>
+            <Nav.Link href="/#projects"className={activeLink ==='projects'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            <Nav.Link href="/#contacts"className={activeLink ==='contacts'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('contacts')}>Contact</Nav.Link>
             
           </Nav>
 

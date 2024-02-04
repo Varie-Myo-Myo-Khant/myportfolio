@@ -37,7 +37,7 @@ function Projects(){
                   <Col>
                   <Row className="pTitle">
                     <Col>
-                     <span className="subText">Some Things I’ve Built,</span>
+                     <span className="subText">Things I’ve Built,</span>
                       <h2 className="sectionTitle">My Featured Projects </h2>
                     </Col>
 

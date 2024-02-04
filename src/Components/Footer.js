@@ -11,7 +11,7 @@ export const Footer=()=>{
         <Container className='mfooter'>
             <Row>
                 <Col md="auto">
-                    <span className="subText">Designed & Built by Myo Myo Khant</span>
+                    <span className="subText">Copyright ©️ Myo Myo Khant. All Rights Reserved.</span>
                 </Col>
                 <Col>
                 </Col>

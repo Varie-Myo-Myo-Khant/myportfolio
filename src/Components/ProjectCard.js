@@ -4,16 +4,18 @@ export const ProjectCard =({title,description,language,link})=>{
     return(
        <div className="pCard">
        <h3 className="pCardTitle">{title}</h3>
+       <div className="pLanguageCode">
          {
              language.map((lang1,index)=>{
                         return(
+                            
                             <code key={index} className="planguage">{lang1}.</code>
                         )
                     }
                     )
         }
-       <br/>
-       <br/>
+       </div>
+      
        <p className="pCardDescription">{description}</p>
        
       
