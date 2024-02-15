@@ -9,7 +9,7 @@ import logo from '../assets/img/fav.svg';
 import navIcon1 from '../assets/img/linkedin.svg';
 import navIcon2 from '../assets/img/git.svg';
 import navIcon3 from '../assets/img/gmail.svg';
-import resume from '../assets/img/MyoMyoKhant.pdf';
+import resume from '../assets/img/MyoMyoKhantCV.pdf';
 
 function Navigation() {
 

@@ -4,36 +4,95 @@ import Accordion from 'react-bootstrap/Accordion';
 
 function Experience(){
     const experiences = [
+      {
+      title: "Software Developer",
+      company:"Freelance",
+      duration:"2023 - Present",
+      description:<ul> 
+        <li>Building an Intelligent Retail System with Spring Boot RESTful API (backend) and React (frontend), demonstrating full-stack development expertise in JWT Spring Security, Redux, and data mining techniques like association rule.</li>
+        <li>Proficiently developed diverse projects like an Image Recognition System and a Lost and Found System using Python, Django, OpenCV, etc.</li>
+        <li>Conducted Market Basket Analysis using Data Mining Algorithms, Apache PySpark, and PostgreSQL, delivering actionable insights to optimize marketing strategies.</li>
+       <li>Collaborated effectively within teams to ensure project success and meet client requirements.</li>
+        </ul>,
+    },
     {
       title: "Web Director",
-      company:"Digital Laboratory Myanmar",
-      duration:"Aug 2022 - May 2023",
-      description: "Managed multiple websites, improving UI/UX for Japanese sites and building with WordPress, Webflow, and Ghost. Conducted tech research and contributed to SEO by monitoring rankings and providing weekly reports.",
+      company:"Digital Laboratory Myanmar | Full Time",
+      duration:"2022 - 2023",
+      description: <ul>
+        <li>Managed multiple websites, improving UI/UX for Japanese sites and building with WordPress, Webflow, and Ghost. Conducted tech research and contributed to SEO by monitoring rankings and providing weekly reports.</li>
+        <li>Managed a portfolio of at least 8 websites, ensuring high-quality results and timely project completion by
+        facilitating seamless communication across diverse teams in Japan and Myanmar, including customer success,
+        content, design, marketing, and development.</li>
+        <li>Oversaw UI/UX and website updates for key company domains such as Dxable.com, ImplementDigital.com, and
+        Generative.com, prioritizing an optimal user experience.</li>
+        <li>Conducted extensive research on industry-leading CMS tools like Webflow and Ghost, as well as automated
+        testing tools such as Selenium, to enhance website performance. Through this process, Mastered Webflow,
+        Ghost, and WordPress to successfully build and manage sites, including notable projects like Dxable.com and
+        Generative.com.</li>
+        <li>Made significant contributions to the SEO team by actively monitoring website rankings using tools like
+         SERanking, Google Search Console, and Google Analytics. Identified improvement opportunities and
+        implemented effective strategies, generating impactful weekly reports to drive continuous optimization efforts.</li>
+        </ul>,
+    },
+    {
+      title: "IT Research Assistant",
+      company:"Dr. Aung Pyae (SE, Chulalongkorn University, Thailand) | Part Time",
+      duration:"2020 - Present",
+      description: <ul>
+        <li>
+          Managed and supervised survey experiments, including a comparison of Generative AI tools such as ChatGPT
+          and Google Bard, and an image-to-text tool like OpenAI's DALLE usability study with 30 participants, ensuring
+          participant engagement and smooth operation.</li>
+          <li>Conducted the ETL process for survey data and analyzed collected data using statistical methods and IBM SPSS,
+          generating insightful interpretations.</li>
+          <li>Collaborated on drafting research papers such as "Covid-19 & Social Media," "VR & Social Interaction," and "Nonnative English Speakers' Perceptions of Voice User Interfaces: A Usability Study," published in IEEE. Ensured
+          adherence to academic standards, contributing to high-quality scholarly work.</li>
+        
+      </ul>,
     },
     {
       title: "Junior Software Test & QA Services",
-      company:"Ovaspace",
-      duration:"Apr 2022 - Jun 2022",
-      description: "Tested ERP products, wrote documentation, and presented weekly customer meetings in English. Implemented customer data into ERP system and provided support to the development team.",
+      company:"Ovaspace | Full Time",
+      duration:"2022",
+      description:<ul>
+      <li>Primarily responsible for testing key ERP modules (Accounting, Attendance, HCM, PAY, POS) and mastered their
+      business logic, ensuring weekly updates were error-free.</li>
+      <li>Delivered weekly updates to the customer base in Singapore and provided customer support tailored to their
+      queries.</li>
+      <li>Prepared comprehensive test releases and documented test results for ERP system modules to ensure thorough
+      quality assurance.</li>
+      <li>Additionally, facilitated the implementation of customer data into the ERP system to streamline operations and
+      enhance user experience.</li>
+      </ul>,
     },
-    {
-      title: "Freelance IT Research Assistant",
-      company:"For a Ph.D at Chulalongkorn University",
-      duration:"Mar 2020 - Present",
-      description: "Managed survey experiments for AI tools research, ensuring smooth operation. Analyzed data proficiently using statistical methods and IBM SPSS software and contributed to drafting a research paper following academic standards.",
-    },
+    
     {
       title: "Programming Lecturer",
       company:"Freelance",
-      duration:"Jan 2022 - Apr 2022",
-      description: "Teaching students about the details of Programming concepts, Website,and Database.",
+      duration:"2022",
+      description:<ul>
+        <li>Instructed students on the intricacies of Programming concepts, Website Development, and Database
+        Management, covering topics such as HTML, CSS, MySQL, JavaScript, and Bootstrap.</li>
+        <li>Developed weekly lecture slides and facilitated hands-on experiences to enhance student learning</li>
+      </ul>,
+    },
+    {
+      title: "Teaching Assistant",
+      company:"Dr. Aung Pyae (SE, Chulalongkorn University, Thailand) | Part Time",
+      duration:"2021 - 2022",
+      description: <ul>
+        <li>Researched and created lecture slides covering Programming, Design Thinking, and Management topics.</li>
+        <li>Evaluated student papers and crafted challenging mini-exam questions for assessment.</li>
+        <li>Analyzed IT course data to identify trends and areas for improvement.</li>
+      </ul>
     },
 ]
     return(
         <section className="experience" id="experiences">
             <Container>
               <Row>
-                    <span className="expText">Where I’ve Worked,</span>
+                    <span className="expText">Get to know more about,</span>
                     <h2 className="sectionTitle">My Experiences </h2>
               
                  <Accordion className="expContainer" defaultActiveKey="0" >
@@ -53,7 +112,7 @@ function Experience(){
                                 </Accordion.Header>
                             <Accordion.Body className="expItemBody">
                             
-                            <p>{experience.description}</p>
+                            {experience.description}
                             </Accordion.Body>
                     </Accordion.Item>
                         )

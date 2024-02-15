@@ -37,12 +37,12 @@ function Projects(){
                   <Col>
                   <Row className="pTitle">
                     <Col>
-                     <span className="subText">Things I’ve Built,</span>
+                     <span className="subText">Get to know more about,</span>
                       <h2 className="sectionTitle">My Featured Projects </h2>
                     </Col>
 
                     <Col md="auto">
-                     <Link to="/projects" ><button className="btnpj" >View All Projects <ArrowRightCircle size={25}/></button></Link>
+                     <Link to="/projects" ><button className="btnpj" >View All Projects &nbsp;<ArrowRightCircle size={25}/></button></Link>
                     </Col>
                   
                     

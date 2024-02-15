@@ -31,7 +31,7 @@ export const AllProjects =()=>{
       link:"https://github.com/Ms-Myo-Myo-Khant/Smart-Home",
     },
     {
-      title: "FerrÞ Manage9ent SÞste9",
+      title: "Ferry Management System",
      year:2019,
      language :["PHP","Bootstrap","MySQL","HTML"],
       link:null,
