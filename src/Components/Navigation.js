@@ -1,8 +1,7 @@
 // importing required libraries
 import { useState,useEffect } from 'react';
 import { Nav,Navbar,Container } from 'react-bootstrap';
-import { HashLink } from 'react-router-hash-link';
-import {BrowserRouter as Router} from "react-router-dom";
+import { HashLink } from 'react-router-hash-link'; 
 
 // importing required resources
 import logo from '../assets/img/fav.svg';
@@ -51,13 +50,10 @@ function Navigation() {
             <img src={logo} alt="Logo" className='brand'/>
         </Navbar.Brand>
 
-        {/* for mobile version-toggle button */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-            <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle>
+       
 
         {/* changing className of current nav link */}
-        <Navbar.Collapse id="basic-navbar-nav">
+       
           <Nav className="ms-auto">
             <Nav.Link href="/#home" className={activeLink ==='home'? 'active navbar-link': 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
             <Nav.Link href="/#skills" className={activeLink ==='skills'? 'active navbar-link': 'navbar-link'}onClick={()=> onUpdateActiveLink('skills')}>Skills</Nav.Link>
@@ -69,7 +65,7 @@ function Navigation() {
 
           {/* social icon */}
           <span className="navbar-text">
-            <div className="social-icon">
+            <div className="social-icon hide">
                 <a href="https://www.linkedin.com/in/myo-myo-khant-varie-007ab319b/" target='__blank'><img src={navIcon1} alt="My LinkedIn Account"/></a>
                 <a href="https://github.com/Ms-Myo-Myo-Khant" target='__blank'><img src={navIcon2} alt="My Github Account"/></a>
                 <a href="mailto:myokhant122021@gmail.com"><img src={navIcon3} alt="My Gmail"/></a>
@@ -78,7 +74,7 @@ function Navigation() {
              <button className="vvd"><span>Resume</span></button>
             </HashLink>
           </span>
-        </Navbar.Collapse>
+      
       </Container>
     </Navbar>
     

@@ -7,6 +7,7 @@ import Projects from './Projects';
 import Header from './Header';
 import {Contact} from './Contact';
 import { Footer } from './Footer';
+import { LatestProject } from './LatestProject';
 export const Home =()=>{
     return (
        <>
@@ -14,6 +15,7 @@ export const Home =()=>{
       <Navigation />
       <Banner/>
       <Skills/>
+      <LatestProject/>
       <Experience/>
       <Projects/>
       <Contact/>

@@ -681,6 +681,98 @@ h2.expItemHeader.accordion-header{
     align-items: center;
 }
 
+/* for latest project */
+.latestProject{
+    margin-bottom: 80px;
+}
+.latestProject .latestRow{
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    -webkit-box-align: center;
+    align-items: center;
+}
+.latestProject .title{
+    position: relative;
+    grid-area: 1 / 1 / -1 / 7;
+}
+.latestProject .title .caption{
+        margin: 10px 0px;
+        color: #64ffda; 
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+.latestProject .title .proTitle{
+            margin: 0px 0px 20px;
+            color: #ccd6f6;
+             font-size: clamp(24px, 5vw, 28px);
+}
+
+.latestProject .title .prodes{
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: 4px;
+    background-color: #112240;
+    color: #a8b2d1;
+    font-size: 16px;
+}
+.latestProject .title .prodes p{
+    margin-bottom: 0;
+}
+
+.latestProject .title .latestLangauges{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    margin: 25px 0px 10px;
+    padding: 0px;
+    list-style: none;
+}
+
+.latestProject .title .latestLangauges li{
+    margin: 0px 20px 5px 0px;
+    color: #a8b2d1;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.latestProject .title .latestLangauges  a li{
+    font-size: 20px;
+}
+.latestProject .projectImage{
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    grid-area: 1 / 6 / -1 / -1;
+    position: relative;
+    z-index: 1;
+    background: #000;
+    border-radius: 10px; 
+    padding: 10px 0px 0px 75px;
+    cursor: pointer;
+    opacity: 0.7;
+   
+}
+.latestProject .projectImage:hover{
+    opacity: 1;
+}
+.latestProject .projectImage video{ 
+    border-radius: 10px; 
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+    object-fit: cover;
+}
+
+
+
 @media (min-width:1700px) {
 	main .container {
 		max-width: 100%;
@@ -726,9 +818,44 @@ h2.expItemHeader.accordion-header{
 nav.navbar .navbar-nav .nav-link.navbar-link{
     margin:10px;
 }
-div#basic-navbar-nav{
-    background-color: #112240;
+div#basic-navbar-nav{ 
     margin: 0px 12px;
+}
+.ms-auto.navbar-nav {
+    display: none;
+}
+span.navbar-toggler-icon {
+    display: none;
+}
+.social-icon {
+    display: inline;
+}
+
+.navbar-collapse {
+    flex-basis: 0;
+    flex-grow: 0;
+    align-items: center;
+}
+span.navbar-text {
+    margin-right: 20px;
+}
+.latestProject .latestRow{
+    display: flex;
+}
+.latestProject .projectImage{
+    padding: 0px;
+}
+span.navbar-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hide {
+    display: none;
+}
+
+nav.navbar{
+    left: 0;
 }
 }
 
@@ -744,4 +871,21 @@ div#basic-navbar-nav{
   .banner h1 {
     font-size: 60px;
   }
+
+  .latestProject .latestRow {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
 }
+.latestProject .projectImage {
+    padding:0px;
+}
+
+.hide {
+    display: none;
+}
+}
+
+
