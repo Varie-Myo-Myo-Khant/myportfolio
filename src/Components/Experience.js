@@ -7,7 +7,7 @@ function Experience(){
       {
       title: "Software Developer",
       company:"Freelance",
-      duration:"2023 - Present",
+      duration:"June 2023 - Present",
       description:<ul> 
         <li>Building an Intelligent Retail System with Spring Boot RESTful API (backend) and React (frontend), demonstrating full-stack development expertise in JWT Spring Security, Redux, and data mining techniques like association rule.</li>
         <li>Proficiently developed diverse projects like an Image Recognition System and a Lost and Found System using Python, Django, OpenCV, etc.</li>
@@ -18,7 +18,7 @@ function Experience(){
     {
       title: "Web Director",
       company:"Digital Laboratory Myanmar | Full Time",
-      duration:"2022 - 2023",
+      duration:"August 2022 - May 2023",
       description: <ul>
         <li>Managed multiple websites, improving UI/UX for Japanese sites and building with WordPress, Webflow, and Ghost. Conducted tech research and contributed to SEO by monitoring rankings and providing weekly reports.</li>
         <li>Managed a portfolio of at least 8 websites, ensuring high-quality results and timely project completion by
@@ -38,7 +38,7 @@ function Experience(){
     {
       title: "IT Research Assistant",
       company:"Dr. Aung Pyae (SE, Chulalongkorn University, Thailand) | Part Time",
-      duration:"2020 - Present",
+      duration:"March 2020 - May 2023",
       description: <ul>
         <li>
           Managed and supervised survey experiments, including a comparison of Generative AI tools such as ChatGPT
@@ -54,7 +54,7 @@ function Experience(){
     {
       title: "Junior Software Test & QA Services",
       company:"Ovaspace | Full Time",
-      duration:"2022",
+      duration:"April 2022 - June 2023",
       description:<ul>
       <li>Primarily responsible for testing key ERP modules (Accounting, Attendance, HCM, PAY, POS) and mastered their
       business logic, ensuring weekly updates were error-free.</li>
@@ -80,7 +80,7 @@ function Experience(){
     {
       title: "Teaching Assistant",
       company:"Dr. Aung Pyae (SE, Chulalongkorn University, Thailand) | Part Time",
-      duration:"2021 - 2022",
+      duration:"March 2021 - December 2022",
       description: <ul>
         <li>Researched and created lecture slides covering Programming, Design Thinking, and Management topics.</li>
         <li>Evaluated student papers and crafted challenging mini-exam questions for assessment.</li>
