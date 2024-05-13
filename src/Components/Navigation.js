@@ -9,6 +9,7 @@ import navIcon1 from '../assets/img/linkedin.svg';
 import navIcon2 from '../assets/img/git.svg';
 import navIcon3 from '../assets/img/gmail.svg';
 import resume from '../assets/img/MyoMyoKhantCV.pdf';
+import book from '../assets/img/SaleCraftPro.pdf';
 
 function Navigation() {
 
@@ -72,6 +73,10 @@ function Navigation() {
             </div>
           <HashLink to={resume} target='__blank'>
              <button className="vvd"><span>Resume</span></button>
+            </HashLink>
+          </span>
+           <HashLink to={book} target='__blank'>
+              b
             </HashLink>
           </span>
       
