@@ -74,9 +74,9 @@ function Navigation() {
           <HashLink to={resume} target='__blank'>
              <button className="vvd"><span>Resume</span></button>
             </HashLink>
-          </span>
+          
            <HashLink to={book} target='__blank'>
-              b
+              
             </HashLink>
           </span>
       
