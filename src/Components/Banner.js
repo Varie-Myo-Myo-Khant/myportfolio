@@ -16,7 +16,7 @@ export const Banner = () =>{
     // to check the state of text deleting
     const [isDeleting,setDeleting]=useState(false);
     //to rotate postions
-    const toRotate=["Backend Developer", "Software Developer", "Web Director"];
+    const toRotate=["Backend Developer", "Software Developer", "Full-Stack & AI Engineer"];
     //current position
     const [text,setText]=useState('');
     //delay between character chage
@@ -89,7 +89,7 @@ export const Banner = () =>{
                         </p>
                         {/* Using boostrap icons */}
                         
-                       <a href="https://www.linkedin.com/in/myo-myo-khant-varie-007ab319b/" target="_blank"><button >Let's Connect ! <ArrowRightCircle size={25}/></button></a>
+                       <a href="https://www.linkedin.com/in/myo-myo-khant/" target="_blank"><button >Let's Connect ! <ArrowRightCircle size={25}/></button></a>
                      
                         </div>
                    }
