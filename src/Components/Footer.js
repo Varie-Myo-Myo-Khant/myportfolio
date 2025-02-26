@@ -18,7 +18,7 @@ export const Footer=()=>{
                 <Col md="auto">
                 <span className="navbar-text">
             <div className="social-icon">
-                <a href="https://www.linkedin.com/in/myo-myo-khant-varie-007ab319b/" target='__blank'><img src={navIcon1} alt="My LinkedIn Account"/></a>
+                <a href="https://www.linkedin.com/in/myo-myo-khant" target='__blank'><img src={navIcon1} alt="My LinkedIn Account"/></a>
                 <a href="https://github.com/Ms-Myo-Myo-Khant" target='__blank'><img src={navIcon2} alt="My Github Account"/></a>
                 <a href="mailto:myokhant122021@gmail.com"><img src={navIcon3} alt="My Gmail"/></a>
             </div>
