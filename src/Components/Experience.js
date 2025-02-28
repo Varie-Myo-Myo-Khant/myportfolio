@@ -91,11 +91,12 @@ function Experience(){
     return(
         <section className="experience" id="experiences">
             <Container>
-              <Row>
-                    <span className="expText">Get to know more about,</span>
+              <Row className="skillcontainer">
+                    <span className="subText">Get to know more about,</span>
                     <h2 className="sectionTitle">My Experiences </h2>
-              
-                 <Accordion className="expContainer" defaultActiveKey="0" >
+    
+                    {/* <p className="sdescription">With 4+ years of experience in software engineering and AI development, I have worked across telecom, AI startups, and freelance projects. At ATOM Myanmar, I contributed to large-scale broadband subscription systems, sales applications, and data management. At Mascot Pte Ltd, I developed an AI-powered recommendation system using LLMs and vector databases. As a freelance AI & full-stack developer, I have built AI chatbots, recommendation engines, and automation tools using Python, Django, LangChain, and cloud technologies. My expertise spans enterprise applications, microservices, and cloud-based AI solutions, delivering impactful and scalable innovations.</p> */}
+                 {/* <Accordion className="expContainer" defaultActiveKey="0" >
                      {
                     experiences.map((experience,index)=>{
                         return(
@@ -121,7 +122,7 @@ function Experience(){
                   }
                     
             
-                    </Accordion>
+                    </Accordion> */}
                     </Row>
             </Container>
         </section>

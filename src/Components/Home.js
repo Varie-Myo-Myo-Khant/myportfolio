@@ -16,7 +16,7 @@ export const Home =()=>{
       <Banner/>
       <Skills/>
       <LatestProject/>
-      <Experience/>
+      {/* <Experience/> */}
       <Projects/>
       <Contact/>
       <Footer/>

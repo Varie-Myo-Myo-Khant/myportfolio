@@ -1,8 +1,8 @@
 import {useState, useEffect} from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {ArrowRightCircle} from "react-bootstrap-icons";
-
-
+import resume from '../assets/img/MyoMyoKhantCV.pdf';
+import { HashLink } from 'react-router-hash-link'; 
 // importing libraries for animation
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -81,15 +81,16 @@ export const Banner = () =>{
                         <span className="tagline">Hi, My name is </span>
                         <h1>{`Myo Myo Khant (Varie)`}
                         {/* for role animation */}
-                        <span className="txt-rotate" dataPeriod="1000" data-rotate='["Backend Developer", "Software Development", "Web Director"]'>
+                        <span className="txt-rotate" dataPeriod="1000" data-rotate='["AI & Full-Stack Engineer", "Software Engineer", "LLMs | Machine Learning | Scalable Systems"]'>
                         <br/>
                         <span className="wrap">{text}</span></span></h1>
                         <p>
-                           I am a passionate software engineer and backend developer dedicated to crafting extraordinary digital experiences through the latest technologies. I currently emphasize creating accessible, user-centric products, particularly in Smart Point of Sale (POS) and Management Systems. 
-                        </p>
+                        With 4+ years of experience in software engineering and AI development, I have worked on full-stack applications, AI-powered solutions, and scalable enterprise systems. I have experience developing AI-driven chatbots, recommendation engines, and automation tools using Python, Django, LangChain, and cloud technologies. In my previous roles, I have worked on broadband subscription management, e-commerce applications, and enterprise-level AI/ML integrations. My work spans startups, telecom companies, and freelance projects, where I have designed and deployed AI applications, microservices, and cloud-based infrastructures. Passionate about innovation, I thrive in fast-paced, collaborative environments that drive technological advancements.</p>
                         {/* Using boostrap icons */}
                         
-                       <a href="https://www.linkedin.com/in/myo-myo-khant/" target="_blank"><button >Let's Connect ! <ArrowRightCircle size={25}/></button></a>
+                       <HashLink to={resume} target='__blank'>
+                       <button >Download My Resume! <ArrowRightCircle size={25}/></button>
+                        </HashLink>
                      
                         </div>
                    }
