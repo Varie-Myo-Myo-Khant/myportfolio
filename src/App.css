@@ -859,6 +859,17 @@ span.navbar-text {
 nav.navbar{
     left: 0;
 }
+
+.skillRow.row {
+    display: grid;
+    row-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.scards.col {
+    width: 100% !important;
+}
+
 }
 
 /* iPads (Portrait and Landscape) */
